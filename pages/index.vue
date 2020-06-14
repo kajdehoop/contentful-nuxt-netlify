@@ -62,7 +62,10 @@ export default {
     }
   },
   head: {
-    title: "Kaj de Hoop"
+    title: "Kaj de Hoop",
+    htmlAttrs: {
+      lang: 'en'
+    },
   },
   methods: {
     updateTag (tag) {
