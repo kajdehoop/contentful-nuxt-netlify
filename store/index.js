@@ -7,6 +7,7 @@ export const state = () => ({
 
 export const mutations = {
   updatePosts: (state, posts) => {
+    console.log('posts', posts)
     state.posts = posts;
   },
   setTag: (state, tag) => {
@@ -19,7 +20,8 @@ export const actions = {
     try {
       if (!client) return;
       const response = await client.getEntries({
-        content_type: "blogPost"
+        content_type: "blogPost",
+        order: '-fields.publishDate'
       });
       if (response.items.length > 0) commit("updatePosts", response.items);
     } catch (err) {

@@ -9,10 +9,28 @@
     <div
       class="image"
       :style="
-        `background: url(https:${post.fields.heroImage.fields.file.url}?fm=jpg&fl=progressive&w=660&h=300) center center no-repeat`
+        `background: url(https:${post.fields.heroImage.fields.file.url}?fm=jpg&fl=progressive&w=1000&h=500) center center no-repeat`
       "
     ></div>
     <article v-html="$md.render(post.fields.body)"></article>
+    <br/>
+    <a 
+      v-for="pdf in post.fields.pdf"
+      :key="pdf.sys.id"
+      :href="pdf.fields.file.url"
+    >
+      Click here to view {{ pdf.fields.title }}
+    </a>
+    <a 
+      v-for="attachment in post.fields.attachment"
+      :key="attachment.sys.id"
+      :href="attachment.fields.file.url"
+    >
+      Click here to download {{ attachment.fields.title }}
+    </a>
+    <br/><br/>
+    <hr>
+    <br/>
     <iframe v-for="url in post.fields.youtubeIds"
       :key="url"
       frameborder="0" 
@@ -28,7 +46,7 @@
       :key="image.sys.id"
       class="image"
       :style="
-        `background: url(https:${image.fields.file.url}?fm=jpg&fl=progressive&w=660&h=300) center center no-repeat`
+        `background: url(https:${image.fields.file.url}?fm=jpg&fl=progressive&w=1000&h=500) center center no-repeat`
       "
     />
   </section>

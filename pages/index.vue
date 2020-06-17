@@ -15,8 +15,16 @@
       </video>
     </div> -->
     <div class="container">
-      
 
+      <particles id="my-id-canvas"/>
+      
+      <!-- <vue-granim 
+        id="my-id-canvas"
+        :key="granimKey"
+        :direction="direction"
+        :opacity="opacity"
+        :isPausedWhenNotInView="false"
+        :states="states"></vue-granim> -->
       <!-- <div class="cog1" id="cog"></div>
       <div class="cog1" id="cog-anti"></div> -->
 
@@ -28,6 +36,7 @@
         <a @click="updateTag('UI')" class="tagBtn">UI</a>
         <a @click="updateTag('interactive-installation')" class="tagBtn">Interactive Installations</a>
         <a @click="updateTag('photo-video')" class="tagBtn">Photography/Video</a>
+        <a @click="updateTag('3D')" class="tagBtn">3D</a>
         <a @click="updateTag('concept')" class="tagBtn">Concepts</a>
         <a @click="updateTag('backend')" class="tagBtn">Backend</a>
       </div>
@@ -53,13 +62,39 @@
 </template>
 
 <script>
-
+import particles from '../components/particles'
 
 export default {
+  components: {
+    particles
+  },
+  // data () {
+  //   return {
+  //     direction: 'top-bottom',
+  //     direction2: 'radial',
+  //     opacity: [1, 1],
+  //     classes: ['class-1', 'class-2'],
+  //     gradient1: '#084c52',
+  //     gradient2: '#102342',
+  //     granimKey: 1
+  //   }
+  // },
   computed: {
     posts() {
       return this.$store.getters.posts;
-    }
+    },
+    // states() {
+    //   return {
+    //     'default-state': {
+    //       gradients: [
+    //         [this.gradient1, this.gradient2],
+    //         [this.gradient2, this.gradient1]
+    //       ],
+    //       transitionSpeed: 5000,
+    //       loop: true
+    //     }
+    //   }
+    // }
   },
   head: {
     title: "Kaj de Hoop",
@@ -69,13 +104,45 @@ export default {
   },
   methods: {
     updateTag (tag) {
+      // this.setBgColor(tag)
       this.$store.dispatch('updateTag', { tag })
+    },
+    setBgColor(tag) {
+      switch(tag) {
+        case 'UI':
+          this.gradient1 = '#350852'
+          break
+        case 'interactive-installation':
+          this.gradient1 = '#520808'
+          break
+        case 'photo-video':
+          this.gradient1 = '#0b5208'
+          break
+        case 'concept':
+          this.gradient1 = '#3a5208'
+          break
+        case 'backend':
+          this.gradient1 = '#522c08'
+          break
+        default:
+          this.gradient1 = '#084c52'
+      }
+      this.granimKey++
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+#my-id-canvas {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -10;
+}
+
 section {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
