@@ -5,18 +5,37 @@
 </template>
 
 <script>
-// import pa
 export default {
   name: "particles",
+  data() { 
+    return { 
+        windowWidth: process.client ? window.innerWidth : 1920
+    } 
+  },
   mounted() {
     this.initParticles()
+
+    if (process.client) {
+        window.addEventListener('resize', () => {
+            this.windowWidth = window.innerWidth
+        })
+    }
+  },
+  computed: {
+    particleAmount() {
+      if (this.windowWidth <= 768) {
+          return 25
+      } else {
+          return 80
+      }
+    }
   },
   methods: {
     initParticles() {
       window.particlesJS("particles-js", {
                 "particles": {
                     "number": {
-                        "value": 80,
+                        "value": this.particleAmount,
                         "density": {
                             "enable": true,
                             "value_area": 700

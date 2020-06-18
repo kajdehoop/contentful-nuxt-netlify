@@ -76,7 +76,7 @@ p {
 }
 
 .thumbnail {
-  filter: sepia(100%);
+  filter: sepia(100%) brightness(80%);
 }
 
 .thumbnail:hover {

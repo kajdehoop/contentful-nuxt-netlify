@@ -44,7 +44,7 @@
         <div
           class="image thumbnail"
           :style="
-            `background: url(https:${post.fields.heroImage.fields.file.url}?fm=jpg&fl=progressive&w=260&h=260) center center no-repeat; background-size: cover;`
+            `background: url(https:${post.fields.heroImage.fields.file.url}?fm=jpg&fl=progressive&w=400&h=400) center center no-repeat; background-size: cover;`
           "
         ></div>
         <h2 class="title">
@@ -170,7 +170,7 @@ section {
 
 .image {
   grid-area: 1 / 1 / 4 / 3;
-  opacity: 0.8;
+  // opacity: 0.8;
 }
 .title {
   grid-area: 1 / 3 / 2 / 6;
