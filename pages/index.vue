@@ -15,20 +15,7 @@
       </video>
     </div> -->
     <div class="container">
-
-      <particles id="my-id-canvas"/>
-      
-      <!-- <vue-granim 
-        id="my-id-canvas"
-        :key="granimKey"
-        :direction="direction"
-        :opacity="opacity"
-        :isPausedWhenNotInView="false"
-        :states="states"></vue-granim> -->
-      <!-- <div class="cog1" id="cog"></div>
-      <div class="cog1" id="cog-anti"></div> -->
-
-
+      <particles id="particles-canvas"/>
       <h1 class="title">Kaj's Razendsnelle Portfolio</h1>
       <p>Welcome people of the good life! Read more <nuxt-link to="about">about me</nuxt-link> or check my stuff below</p>
       <div>
@@ -68,33 +55,10 @@ export default {
   components: {
     particles
   },
-  // data () {
-  //   return {
-  //     direction: 'top-bottom',
-  //     direction2: 'radial',
-  //     opacity: [1, 1],
-  //     classes: ['class-1', 'class-2'],
-  //     gradient1: '#084c52',
-  //     gradient2: '#102342',
-  //     granimKey: 1
-  //   }
-  // },
   computed: {
     posts() {
       return this.$store.getters.posts;
     },
-    // states() {
-    //   return {
-    //     'default-state': {
-    //       gradients: [
-    //         [this.gradient1, this.gradient2],
-    //         [this.gradient2, this.gradient1]
-    //       ],
-    //       transitionSpeed: 5000,
-    //       loop: true
-    //     }
-    //   }
-    // }
   },
   head: {
     title: "Kaj de Hoop",
@@ -134,7 +98,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#my-id-canvas {
+#particles-canvas {
   position: absolute;
   width: 100%;
   min-height: 100%;

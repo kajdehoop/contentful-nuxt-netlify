@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <!-- <particles-bg type="lines" :bg="true" /> -->
+    <particles id="particles-canvas"/>
     <p class="back">
       <nuxt-link exact to="/">⟵ Back to Home</nuxt-link>
     </p>
@@ -53,12 +53,12 @@
 </template>
 
 <script>
-// import { ParticlesBg } from "particles-bg-vue";
+import particles from '../components/particles'
 
 export default {
-  // components: {
-  //   ParticlesBg
-  // },
+  components: {
+    particles
+  },
   data() {
     return {
       slug: this.$route.params.slug
@@ -85,6 +85,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#particles-canvas {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -10;
+}
+
 .back {
   margin-top: 20px;
 }

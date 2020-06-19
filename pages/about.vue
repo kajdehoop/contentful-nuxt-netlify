@@ -1,35 +1,20 @@
 <template>
   <section class="container">
+    <particles id="particles-canvas"/>
     <p class="back">
       <nuxt-link exact to="/">⟵ Back to Home</nuxt-link>
     </p>
     <h1>'bout me</h1>
-     <!-- <particles-bg type="lines" :bg="true" /> -->
-    <!-- <div
-      class="image"
-      :style="
-        `background: url(https:${post.fields.heroImage.fields.file.url}) center center no-repeat`
-      "
-    ></div> -->
-    <vue-granim 
-        id="my-id-canvas"
-        :direction="direction"
-        :opacity="opacity"
-        :isPausedWhenNotInView="false"
-        :states="states"></vue-granim>
     <article>My name is Kaj. I believe in making the world a more awesome place by creating special experiences</article>
   </section>
 </template>
 
 <script>
-// import { ParticlesBg } from "particles-bg-vue";
-import VueGranim from '../components/VueGranim'
+import particles from '../components/particles'
+
 export default {
-  // components: {
-  //   ParticlesBg
-  // },
   components: {
-    VueGranim
+    particles
   },
   data () {
     return {
@@ -56,7 +41,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#my-id-canvas {
+#particles-canvas {
   position: absolute;
   width: 100%;
   min-height: 100%;
