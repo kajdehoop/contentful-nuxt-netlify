@@ -15,7 +15,7 @@
       </video>
     </div> -->
     <div class="container">
-      <particles id="particles-canvas"/>
+      <!-- <particles id="particles-canvas"/> -->
       <h1 class="title">Kaj's Razendsnelle Portfolio</h1>
       <p>Welcome people of the good life! Read more <nuxt-link to="about">about me</nuxt-link> or check my stuff below</p>
       <div>
