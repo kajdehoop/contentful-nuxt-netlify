@@ -9,7 +9,12 @@
       <gallery :images="post.fields.images"/>
     </template>
 
+    <template v-if="slug === 'bucketboost'">
+      <bucket-boost/>
+    </template>
+
     <template v-else>
+      <div class="panel">
       <h1>{{ post.fields.title }}</h1>
       <p>{{ post.fields.publishDate.substring(0,4) }}</p>
       <div
@@ -43,8 +48,8 @@
         scrolling="no" 
         marginheight="0" 
         marginwidth="0"
-        width="788.54" 
-        height="443" 
+        width="100%" 
+        height="400" 
         type="text/html" 
         :src="'https://www.youtube.com/embed/' + url + '?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0'"/>
       <div
@@ -55,6 +60,7 @@
           `background: url(https:${image.fields.file.url}?fm=jpg&fl=progressive&w=1000&h=500) center center no-repeat`
         "
       />
+      </div>
     </template>
   </section>
 </template>
@@ -62,11 +68,13 @@
 <script>
 import particles from '../components/particles'
 import Gallery from '../components/Gallery'
+import BucketBoost from '../components/BucketBoost'
 
 export default {
   components: {
     particles,
-    Gallery
+    Gallery,
+    BucketBoost
   },
   data() {
     return {
