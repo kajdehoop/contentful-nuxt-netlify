@@ -67,16 +67,16 @@ export default {
                     //         "nb_sides": 5
                     //     },
                     // },
-                    "opacity": {
-                        "value": 0.5,
-                        "random": false,
-                        "anim": {
-                            "enable": true,
-                            "speed": 1,
-                            "opacity_min": 0.1,
-                            "sync": false
-                        }
-                    },
+                    // "opacity": {
+                    //     "value": 0.5,
+                    //     "random": false,
+                    //     "anim": {
+                    //         "enable": true,
+                    //         "speed": 1,
+                    //         "opacity_min": 0.1,
+                    //         "sync": false
+                    //     }
+                    // },
                     // "size": {
                     //     "value": 3,
                     //     "random": true,

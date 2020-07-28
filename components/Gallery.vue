@@ -55,6 +55,7 @@ export default {
 
 <style scoped>
 .image {
-  height: 300px;
+  height: 360px;
+  cursor: pointer;
 }
 </style>

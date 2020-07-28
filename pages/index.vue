@@ -15,8 +15,7 @@
       </video>
     </div> -->
     <div class="container">
-      <!-- <particles id="particles-canvas"/> -->
-      <h1 class="title">Kaj's Razendsnelle Portfolio</h1>
+      <h1 class="title">Kaj de Hoop</h1>
       <p>Welcome people of the good life! Read more <nuxt-link to="about">about me</nuxt-link> or check my stuff below</p>
       <div>
         <a @click="updateTag(null)" class="tagBtn">All</a>
@@ -49,12 +48,7 @@
 </template>
 
 <script>
-import particles from '../components/particles'
-
 export default {
-  components: {
-    particles
-  },
   computed: {
     posts() {
       return this.$store.getters.posts;
@@ -98,14 +92,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#particles-canvas {
-  position: absolute;
-  width: 100%;
-  min-height: 100%;
-  left: 0;
-  top: 0;
-  z-index: -10;
-}
 
 section {
   display: grid;
@@ -149,70 +135,5 @@ section {
 .more {
   color: #eee;
 }
-
-// .cog1{
-//   width: 20px;
-//   height: 20px;
-//   background: red;
-// }
-
-// #cog {
-// 	-webkit-animation: cog 5s infinite;			
-// 	-moz-animation: cog 5s infinite;
-// 	-ms-animation: cog 5s infinite; 			
-// 	animation: cog 5s infinite;
-// 	-webkit-animation-timing-function: linear;	
-// 	-moz-animation-timing-function: linear;		
-// 	-ms-animation-timing-function: linear;
-// 	animation-timing-function: linear	
-// }
-// @-webkit-keyframes cog {
-// 100%{ -webkit-transform: rotate(360deg)}
-// }
-// @-moz-keyframes cog {
-// 100%{ -webkit-transform: rotate(360deg)}
-// }
-// @-ms-keyframes cog {
-// 100%{ -webkit-transform: rotate(360deg)}
-// }
-// @keyframes cog {
-// 100%{ 
-// 	-webkit-transform: rotate(360deg);
-// 	-moz-transform: rotate(360deg);
-// 	-ms-transform: rotate(360deg);
-// 	transform: rotate(360deg)
-// }
-// }
-// #cog-anti {
-// 	-webkit-transform: rotate(0deg);
-// 	-ms-transform: rotate(0deg);
-// 	-o-transform: rotate(0deg);
-// 	transform: rotate(0deg);
-// 	-webkit-animation: cog-anti 5s infinite;
-// 	-moz-animation: cog-anti 5s infinite;
-// 	-ms-animation: cog-anti 5s infinite;
-// 	animation: cog-anti 5s infinite;
-// 	-webkit-animation-timing-function: linear;
-// 	-moz-animation-timing-function: linear;
-// 	-ms-animation-timing-function: linear;
-// 	animation-timing-function: linear
-// }
-// @-webkit-keyframes cog-anti {
-// 100%{ -webkit-transform: rotate(-360deg)}
-// }
-// @-moz-keyframes cog-anti {
-// 100%{ -webkit-transform: rotate(-360deg)}
-// }
-// @-ms-keyframes cog-anti {
-// 100%{ -webkit-transform: rotate(-360deg)}
-// }
-// @keyframes cog-anti {
-// 100%{ 
-// 	-webkit-transform: rotate(-360deg);
-// 	-moz-transform: rotate(-360deg);
-// 	-ms-transform: rotate(-360deg);
-// 	transform: rotate(-360deg)
-// }
-// }
 
 </style>

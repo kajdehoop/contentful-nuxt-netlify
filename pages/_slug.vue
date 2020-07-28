@@ -1,6 +1,5 @@
 <template>
   <section class="container">
-    <particles id="particles-canvas"/>
     <p class="back">
       <nuxt-link exact to="/">⟵ Back to Home</nuxt-link>
     </p>
@@ -13,14 +12,14 @@
       <bucket-boost/>
     </template>
 
-    <template v-else>
-      <div class="panel">
+    <template v-if="slug !== 'gallery' && slug !== 'bucketboost'">
+      <div>
       <h1>{{ post.fields.title }}</h1>
       <p>{{ post.fields.publishDate.substring(0,4) }}</p>
       <div
         class="image"
         :style="
-          `background: url(https:${post.fields.heroImage.fields.file.url}?fm=jpg&fl=progressive&w=1000&h=500) center center no-repeat`
+          `background: url(https:${post.fields.heroImage.fields.file.url}?fm=jpg&fl=progressive&w=1000&h=1000) center center no-repeat`
         "
       ></div>
       <article v-html="$md.render(post.fields.body)"></article>
@@ -40,7 +39,7 @@
         Click here to download {{ attachment.fields.title }}
       </a>
       <br/><br/>
-      <hr>
+      <!-- <hr> -->
       <br/>
       <iframe v-for="url in post.fields.youtubeIds"
         :key="url"
@@ -57,7 +56,7 @@
         :key="image.sys.id"
         class="image"
         :style="
-          `background: url(https:${image.fields.file.url}?fm=jpg&fl=progressive&w=1000&h=500) center center no-repeat`
+          `background: url(https:${image.fields.file.url}?fm=jpg&fl=progressive&w=1000&h=1000) center center no-repeat`
         "
       />
       </div>
@@ -66,13 +65,11 @@
 </template>
 
 <script>
-import particles from '../components/particles'
 import Gallery from '../components/Gallery'
 import BucketBoost from '../components/BucketBoost'
 
 export default {
   components: {
-    particles,
     Gallery,
     BucketBoost
   },
@@ -102,14 +99,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#particles-canvas {
-  position: absolute;
-  width: 100%;
-  min-height: 100%;
-  left: 0;
-  top: 0;
-  z-index: -10;
-}
 
 .back {
   margin-top: 20px;

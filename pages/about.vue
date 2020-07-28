@@ -1,39 +1,25 @@
 <template>
   <section class="container">
-    <particles id="particles-canvas"/>
     <p class="back">
       <nuxt-link exact to="/">⟵ Back to Home</nuxt-link>
     </p>
     <h1>'bout me</h1>
-    <article>My name is Kaj. I believe in making the world a more awesome place by creating special experiences</article>
+    <article>
+
+<p>Curiosity brought me many things, from traveling to different countries and cultures all over the world, to learning how to program.</p>
+
+<p>I studied Art & Technology; a very broad study including programming, game design, graphic design, electronics, 3D animation, storytelling, and much more. Starting from my second year, I did the extracurricular program Creative Entrepreneurship. During this program I combined my love for development with my love for travel. Together with two friends I’ve build the mobile app BucketBoost. This app connects travelers with each other, based on their bucket list. By building BucketBoost, we gained a lot of experience with web and mobile development, especially in ReactJS. Using the skills we acquired, we started Developmunt to help others with building their own applications.</p>
+
+<p>One of my best (quite spontaneous) decisions was moving to Indonesia for half a year, to do a minor in Visual Communication Design at Telkom University in Bandung. The culture shock was immense, but I learned so much about dealing with people from different cultures and unexpected situations. But the most important thing I learned is that it doesn’t matter where you are, you can always feel at home.</p>
+
+<p>I want to design experiences. If you know something about designing and building experiences, in any way, just add me on <a href="https://www.linkedin.com/in/kaj-de-hoop/">LinkedIn</a> and I would love to talk about this.</p>
+
+    </article>
   </section>
 </template>
 
 <script>
-import particles from '../components/particles'
-
 export default {
-  components: {
-    particles
-  },
-  data () {
-    return {
-      direction: 'top-bottom',
-      direction2: 'radial',
-      opacity: [1, 1],
-      classes: ['class-1', 'class-2'],
-      states: {
-        'default-state': {
-          gradients: [
-            ['#084c52', '#112545'],
-            ['#112545', '#084c52']
-          ],
-          transitionSpeed: 5000,
-          loop: true
-        }
-      }
-    }
-  },
   head: {
     title: "About me"
   }
@@ -41,14 +27,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#particles-canvas {
-  position: absolute;
-  width: 100%;
-  min-height: 100%;
-  left: 0;
-  top: 0;
-  z-index: -10;
-}
 
 .back {
   margin-top: 20px;
