@@ -1,8 +1,9 @@
 <template>
   <div>
-    <particles id="particles-canvas"/>
+    
     <nuxt />
     <app-footer />
+    <particles id="particles-canvas"/>
   </div>
 </template>
 

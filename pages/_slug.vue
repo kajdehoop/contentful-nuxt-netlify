@@ -50,6 +50,7 @@
         width="100%" 
         height="400" 
         type="text/html" 
+        class="youtubeVideo"
         :src="'https://www.youtube.com/embed/' + url + '?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0'"/>
       <div
         v-for="image in post.fields.images"

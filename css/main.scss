@@ -75,6 +75,9 @@ h1 {
     0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
+h2 {
+  color: #d3d3d3;
+}
 
 p {
   margin-top: 15px;
@@ -90,17 +93,21 @@ p {
   border: 2px solid #04225f;
   box-shadow: 4px 4px 8px -2px rgba(0, 0, 0, 0.6);
   background-size: cover;
-  
+  clip-path: polygon(5% 0, 95% 0, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0 90%, 0 10%)
 }
 
 .thumbnail {
-  // filter: sepia(100%) brightness(80%);
+  // clip-path: polygon(12% 0, 88% 0, 100% 20%, 100% 80%, 89% 100%, 12% 100%, 0% 80%, 0% 20%);
   filter: saturate(60%) brightness(95%);
 }
 
 .thumbnail:hover {
   transition: 0.4s;
   filter: none;
+}
+
+.youtubeVideo {
+  clip-path: polygon(5% 0, 95% 0, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0 90%, 0 10%);
 }
 
 .panel {
