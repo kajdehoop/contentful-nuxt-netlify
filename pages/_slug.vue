@@ -38,7 +38,7 @@
       >
         Click here to download {{ attachment.fields.title }}
       </a>
-      <br/><br/>
+      <!-- <br/><br/> -->
       <!-- <hr> -->
       <br/>
       <iframe v-for="url in post.fields.youtubeIds"
