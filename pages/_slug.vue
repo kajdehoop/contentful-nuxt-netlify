@@ -111,4 +111,14 @@ export default {
   margin: 30px 0;
   background-size: 100% auto !important;
 }
+
+@media only screen and (max-width: 600px) {
+  .image {
+    height: 180px;
+  }
+
+  .youtubeVideo {
+    height: 180px;
+  }
+}
 </style>

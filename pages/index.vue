@@ -119,7 +119,19 @@ section {
 
 @media only screen and (max-width: 600px) {
   section {
-    grid-template-rows: 40px 20px 1fr;
+    display: flex;
+    flex-direction: column;
+    border-top: #e8e7e74f solid 1px;
+
+    h2,p {
+        text-align: center;
+    }
+  }
+
+  .thumbnail {
+    height: 130px;
+    width: 70%;
+    margin: 0 auto;
   }
 }
 

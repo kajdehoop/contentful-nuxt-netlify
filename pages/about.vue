@@ -4,6 +4,11 @@
       <nuxt-link exact to="/">⟵ Back to Home</nuxt-link>
     </p>
     <h1>'bout me</h1>
+
+    <div style="display: flex">
+      <img class ="image" src="../assets/profile.jpg">
+    </div>
+
     <article>
 
 <p>Curiosity brought me many things, from traveling to different countries and cultures all over the world, to learning how to program.</p>
@@ -33,9 +38,7 @@ export default {
 }
 
 .image {
-  width: 100%;
-  height: 300px;
-  margin: 30px 0;
-  background-size: 100% auto !important;
+  height: 250px;
+  margin: 30px auto;
 }
 </style>
