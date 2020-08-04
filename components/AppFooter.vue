@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p style="text-align: center"> &copy Kaj de Hoop ~  {{ year }}</p>
+    <p style="text-align: center"> &copy; Kaj de Hoop ~  {{ year }}</p>
   </footer>
 </template>
 
